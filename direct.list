@@ -13,6 +13,7 @@ DOMAIN-SUFFIX,zmpt.cc
 DOMAIN-SUFFIX,carpt.net
 DOMAIN-SUFFIX,hdtime.org
 DOMAIN-KEYWORD,m-team
+DOMAIN-SUFFIX,btschool.club
 # NAME: PlayStation Download
 DOMAIN-SUFFIX,dl.playstation.net
 PROCESS-NAME,ddns-go
