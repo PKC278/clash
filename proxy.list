@@ -14,7 +14,4 @@ DOMAIN-SUFFIX,mb3admin.com
 DOMAIN-SUFFIX,mikanani.me
 # NAME: hcaptcha
 DOMAIN-SUFFIX,hcaptcha.com
-DOMAIN-SUFFIX,bygcloud.com
-DOMAIN-SUFFIX,kuromis.com
-DOMAIN-SUFFIX,cn2gias.uk
 PROCESS-NAME,mosdns
