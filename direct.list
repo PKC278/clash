@@ -1,5 +1,6 @@
 DOMAIN-SUFFIX,pkcpersonal.cn
 DOMAIN-SUFFIX,pkcsublog.top
+DOMAIN,api.cloudflare.com
 # NAME: Tampermonkey dashboard
 DOMAIN,ui.tampermonkey.net
 # NAME: PT
