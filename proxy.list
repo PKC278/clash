@@ -18,3 +18,4 @@ PROCESS-NAME,mosdns
 # NAME: DOH
 DOMAIN-SUFFIX,dns.google
 DOMAIN-SUFFIX,cloudflare-dns.com
+DOMAIN,one.one.one.one
