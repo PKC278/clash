@@ -1,8 +1,9 @@
 DOMAIN-SUFFIX,pkcpersonal.cn
 DOMAIN-SUFFIX,pkcsublog.top
 DOMAIN,api.cloudflare.com
-# NAME: Tampermonkey dashboard
+# NAME: Dashboard
 DOMAIN,ui.tampermonkey.net
+DOMAIN-SUFFIX,immersivetranslate.com
 # NAME: PT
 DOMAIN-SUFFIX,hddolby.com
 DOMAIN-SUFFIX,hdfans.org
@@ -19,11 +20,10 @@ DOMAIN-SUFFIX,btschool.club
 DOMAIN-SUFFIX,dl.playstation.net
 PROCESS-NAME,ddns-go
 # NAME: IPTV
+DOMAIN-SUFFIX,mobaibox.com
+IP-CIDR,183.207.0.0/16,no-resolve
+DOMAIN-SUFFIX,cctv.cn
+DOMAIN-SUFFIX,yangshipin.cn
 DOMAIN-SUFFIX,dnsany.com
 DOMAIN-SUFFIX,cmvideo.cn
 DOMAIN-SUFFIX,chinamobile.com
-DOMAIN-SUFFIX,mobaibox.com
-DOMAIN-SUFFIX,gitv.tv
-DOMAIN-SUFFIX,cctv.cn
-DOMAIN-SUFFIX,yangshipin.cn
-IP-CIDR,183.206.0.0/15,no-resolve
