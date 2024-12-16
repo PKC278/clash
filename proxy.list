@@ -4,10 +4,6 @@ DOMAIN-SUFFIX,keeflys.com
 DOMAIN-SUFFIX,brew.sh
 # NAME: intellij AI
 DOMAIN-SUFFIX,intellij.net
-# NAME: sub-web
-DOMAIN,sub-web.pkcsublog.top
-# NAME: openwrt
-DOMAIN-SUFFIX,openwrt.ai
 # NAME: Emby Plugin
 DOMAIN-SUFFIX,mb3admin.com
 # NAME: mikanani
