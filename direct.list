@@ -1,6 +1,5 @@
 DOMAIN-SUFFIX,pkcpersonal.cn
 DOMAIN-SUFFIX,pkcsublog.top
-DOMAIN,api.cloudflare.com
 # NAME: Dashboard
 DOMAIN,ui.tampermonkey.net
 DOMAIN-SUFFIX,immersivetranslate.com
