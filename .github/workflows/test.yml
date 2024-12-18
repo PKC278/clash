@@ -1,4 +1,4 @@
-name: Test
+name: Test Profile
 
 on:
   workflow_dispatch:
@@ -9,25 +9,27 @@ on:
 jobs:
   Test:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
         with:
           ref: main
-      - name: Cache Clash_Core
-        id: cache-Clash_Core
+      - name: Cache Mihomo
+        id: cache-Mihomo
         uses: actions/cache@v4
         with:
-          path: clash
-          key: Clash_Core
+          path: mihomo
+          key: Mihomo
           restore-keys: |
-            Clash_Core
+            Mihomo
 
-      - name: Download Clash_Core
-        if: steps.cache-Clash_Core.outputs.cache-hit != 'true'
+      - name: Download Mihomo
+        if: steps.cache-Mihomo.outputs.cache-hit != 'true'
         run: |
-          curl -L -o clash-linux-amd64.tar.gz https://raw.githubusercontent.com/vernesong/OpenClash/core/master/meta/clash-linux-amd64.tar.gz
-          tar -zxvf clash-linux-amd64.tar.gz
+          download_url=$(echo $(curl -s "https://api.github.com/repos/MetaCubeX/mihomo/releases/tags/Prerelease-Alpha") | jq -r '.assets[] | select(.name | test("mihomo-linux-amd64-compatible-alpha.*\\.gz")) | .browser_download_url')
+          curl -L -o mihomo-linux-amd64.gz $download_url
+          gunzip mihomo-linux-amd64.gz
+          mv mihomo-linux-amd64* mihomo
+          chmod +x mihomo
 
       - name: Cache GEOIP
         id: cache-GEOIP
@@ -41,7 +43,7 @@ jobs:
       - name: Download GEOIP
         if: steps.cache-GEOIP.outputs.cache-hit != 'true'
         run: |
-          curl -L -o geoip.metadb https://github.com/Hackl0us/GeoIP2-CN/raw/release/Country.mmdb
+          curl -L -o geoip.metadb https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb
 
       - name: Cache subconverter
         id: cache-subconverter
@@ -55,7 +57,8 @@ jobs:
       - name: Download subconverter
         if: steps.cache-subconverter.outputs.cache-hit != 'true'
         run: |
-          curl -L -o subconverter.tar.gz https://github.com/tindy2013/subconverter/releases/download/v0.9.0/subconverter_linux64.tar.gz
+          download_url=$(curl -s "https://api.github.com/repos/tindy2013/subconverter/releases/latest" | jq -r '.assets[] | select(.name == "subconverter_linux64.tar.gz") | .browser_download_url')
+          curl -L -o subconverter.tar.gz $download_url
 
       - name: Download config.yaml
         run: |
@@ -66,16 +69,17 @@ jobs:
           sleep 2
           curl -L -o config.yaml "http://localhost:25500/sub?target=clash&url=ss%3A%2F%2FYWVzLTI1Ni1jZmI6eXlvdXNlcnBhc3N3b3JkQDEyNy4wLjAuMTo4Mzg4&config=http%3A%2F%2Flocalhost%3A8000%2Fconfig.ini"
 
-      - name: Test
+      - name: Test Profile
         run: |
-          ./clash -d ./ &
-          CLASH_PID=$!
+          ./mihomo -d ./ &
+          Mihomo_PID=$!
           sleep 2
-          if ps -p $CLASH_PID > /dev/null; then
+          if ps -p $Mihomo_PID > /dev/null; then
               exit 0
           else
               exit 1
           fi
+
   Release:
     needs: Test
     runs-on: ubuntu-latest
