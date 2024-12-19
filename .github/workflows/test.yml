@@ -1,7 +1,6 @@
 name: Test Profile
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - main
