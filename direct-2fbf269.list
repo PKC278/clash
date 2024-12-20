@@ -1,0 +1,28 @@
+DOMAIN-SUFFIX,pkcpersonal.cn
+DOMAIN-SUFFIX,pkcsublog.top
+# NAME: Dashboard
+DOMAIN,ui.tampermonkey.net
+DOMAIN-SUFFIX,immersivetranslate.com
+# NAME: PT
+DOMAIN-SUFFIX,hddolby.com
+DOMAIN-SUFFIX,hdfans.org
+DOMAIN-SUFFIX,rousi.zip
+DOMAIN-SUFFIX,pttime.org
+DOMAIN-SUFFIX,hdkyl.in
+DOMAIN-SUFFIX,hdmayi.com
+DOMAIN-SUFFIX,zmpt.cc
+DOMAIN-SUFFIX,carpt.net
+DOMAIN-SUFFIX,hdtime.org
+DOMAIN-KEYWORD,m-team
+DOMAIN-SUFFIX,btschool.club
+# NAME: PlayStation Download
+DOMAIN-SUFFIX,dl.playstation.net
+PROCESS-NAME,ddns-go
+# NAME: IPTV
+DOMAIN-SUFFIX,mobaibox.com
+IP-CIDR,183.207.0.0/16,no-resolve
+DOMAIN-SUFFIX,cctv.cn
+DOMAIN-SUFFIX,yangshipin.cn
+DOMAIN-SUFFIX,dnsany.com
+DOMAIN-SUFFIX,cmvideo.cn
+DOMAIN-SUFFIX,chinamobile.com
