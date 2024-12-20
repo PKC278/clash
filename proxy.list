@@ -13,6 +13,7 @@ DOMAIN-SUFFIX,hcaptcha.com
 PROCESS-NAME,mosdns
 # NAME: visualstudio marketplace
 DOMAIN,marketplace.visualstudio.com
+DOMAIN,github.gallery.vsassets.io
 # NAME: DOH
 DOMAIN-SUFFIX,dns.google
 DOMAIN-SUFFIX,cloudflare-dns.com
